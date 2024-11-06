@@ -28,17 +28,21 @@ This guide will walk you through setting up an ASP.NET MVC app with GDS precompi
 
 ## Step 3: Add GDS precompiled assets to your project
 
-1. Downlaod the latest pre-compiled GDS assets from [this repo](https://github.com/alphagov/govuk-frontend/releases/tag/v5.7.1).  
+For a full tutorial, see the GOV.UK Guide on using GDS precompiled assets [here](https://frontend.design-system.service.gov.uk/install-using-precompiled-files/#try-gov-uk-frontend-using-precompiled-files).  
+Note: This will require some tinkering to adapt it to the structure of a .NET Core project. Mainly in the way the assets are referenced in the `_Layout.cshtml` file and how you add assets to `wwwroot`.
+
+
+1. Download the latest pre-compiled GDS assets from [this repo](https://github.com/alphagov/govuk-frontend/releases/tag/v5.7.1).  
    Extract the contents of the downloaded zip file.
-2. Copy the "assets" folder from the extracted zip and paste this into the "wwwroot" folder of your project.
-3. Create a folder under "wwwroot" called "stylesheets".  
-   Copy the "govuk-frontend-5.7.1.min.css" and "govuk-frontend-5.7.1.min.css.map" files from the extracted zip and paste these into the "stylesheets" folder.
-4. Create a folder under "wwwroot" called "javascripts".  
-   Copy the "govuk-frontend-5.7.1.min.js" and "govuk-frontend-5.7.1.min.js.map" files from the extracted zip and paste these into the "javascripts" folder.
+2. Copy the `assets` folder from the extracted zip and paste this into the `wwwroot` folder of your project.
+3. Create a folder under `wwwroot` called `stylesheets`.  
+   Copy the `govuk-frontend-5.7.1.min.css` and `govuk-frontend-5.7.1.min.css.map` files from the extracted zip and paste these into the `stylesheets` folder.
+4. Create a folder under `wwwroot` called `javascripts`.  
+   Copy the `govuk-frontend-5.7.1.min.js` and `govuk-frontend-5.7.1.min.js.map` files from the extracted zip and paste these into the `javascripts` folder.
 
 ## Step 4: Update your layout file to include GDS assets
 
-1. Under "Views > Shared" in your project, open the "_Layout.cshtml" file.
+1. Under `Views > Shared` in your project, open the `_Layout.cshtml` file.
 2. In the `<head></head>` section of the file, add the following code:   
    `<link rel="stylesheet" href="~/stylesheets/govuk-frontend-5.7.1.min.css">`
 3. At the top of `<body>`, inside the `<body>` tags, add the following code:  
@@ -57,7 +61,7 @@ This guide will walk you through setting up an ASP.NET MVC app with GDS precompi
     </script>
    ```
    
-Your project now has access to the Government Design System Precompiled Assets via the _Layout.cshtml file.
+Your project now has access to the Government Design System Precompiled Assets via the `_Layout.cshtml` file.
 
 ## Step 5: Commit changes to repo
 
