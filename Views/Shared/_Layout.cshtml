@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="manifest" href="/assets/manifest.json">
+    <title>@ViewData["Title"] - Job Portal</title>
+    <link rel="stylesheet" href="~/stylesheets/govuk-frontend-5.7.1.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+</head>
+<body class="govuk-template__body">
+<script>
+    document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
+</script>
+<!-- Put any shared page stuff here such as header and footer -->
+<header class="govuk-header" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+        <div class="govuk-header__logo">
+            <a asp-controller="Home" asp-action="Index" class="govuk-header__link govuk-header__link--homepage">
+                Job Portal
+            </a>
+        </div>
+    </div>
+</header>
+<section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+      <span class="govuk-service-navigation__service-name">
+        <a asp-controller="JobPosting" asp-action="Index" class="govuk-service-navigation__link">
+          Job Application Service
+        </a>
+      </span>
+            <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+                <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+                    Menu
+                </button>
+                <ul class="govuk-service-navigation__list" id="navigation">
+                    <li class="govuk-service-navigation__item">
+                        <a class="govuk-service-navigation__link" asp-controller="JobPosting" asp-action="Index">
+                            Job Listings
+                        </a>
+                    </li>
+                    <li class="govuk-service-navigation__item">
+                        <a class="govuk-service-navigation__link" asp-controller="JobPosting" asp-action="Create">
+                            Create Job Post
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- Import the minified GOV.UK JS here -->
+<script type="module" src="~/javascripts/govuk-frontend-5.7.1.min.js"></script>
+<script type="module">
+    import { initAll } from './javascripts/govuk-frontend-5.7.1.min.js' // Ignore the error/warning here, it is grabbing it just fine.
+    initAll()
+</script>
+@RenderBody()
+</body>
+</html>
