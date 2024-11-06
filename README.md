@@ -75,4 +75,4 @@ Your project now has access to the Government Design System Precompiled Assets v
 1. See the following page for info on working with GDS components.  
    Note: You will have to copy and paste the HTML examples as nunjucks is not compatible/configured here.
     [GOV.UK Design System Components](https://design-system.service.gov.uk/components/)
-2. Here is a link to an example repo: 
+2. Here is a link to an example repo: [Example GDS Repo](https://github.com/ntotten-kainos/GDS-Example-Repo-MVC-DOTNET)
